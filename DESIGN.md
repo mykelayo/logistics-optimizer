@@ -4,6 +4,8 @@
 This document outlines the technical design of a CLI tool that batch-processes NYC TLC yellow taxi trip data, optimizes delivery-like routes, and stores results in SQLite.
 
 ## Workflow
+![Pipeline Workflow](images/workflow.png)
+
 1. **Data Preparation**: Convert NYC TLC Parquet (`yellow_tripdata_2024-01.parquet`) to logistics CSVs using `scripts/convert_tlc_to_csv.py`, saving locally and uploading to MinIO (`raw/deliveries_2025_01.csv`, `raw/sample_deliveries.csv`).
 2. **Ingest**: Retrieve CSVs from MinIO with `ingest/load_csv.py`, using retries, progress tracking, and structured logging.
 3. **Optimize**: Batch-process data with `optimize/route_optimizer.py` using DuckDB, GeoPandas, and NetworkX for TSP approximation, leveraging parallel processing for scalability.
