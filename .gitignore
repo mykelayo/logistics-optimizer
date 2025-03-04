@@ -1,0 +1,16 @@
+data/*
+!data/README.md
+!data/sample_deliveries.csv
+data/taxi_zones/*
+*.parquet
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.env
+venv/
+logs/*
+.vscode
+store/logistics.db
