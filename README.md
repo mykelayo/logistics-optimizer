@@ -2,7 +2,7 @@
 
 A CLI tool to batch-process logistics delivery data from NYC TLC yellow taxi trips, optimize the routes, and store the results in SQLite.
 
-## Prerequisites
+### Prerequisites
 - Python 3.9+
 - MinIO (local S3-compatible storage)
 
@@ -54,3 +54,9 @@ Here’s the step-by-step process i followed to build this pipeline:
 ```bash
 python -m cli.app --use-sample  # Run with sample data
 python -m cli.app --no-use-sample  # Run with MinIO TLC data
+```
+
+
+## Screenshots
+![CLI Output](images/cli_output.png)  
+![SQLite Table](images/sqlite_table.png)  
